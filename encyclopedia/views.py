@@ -14,7 +14,7 @@ def entry(request, title):
     content = util.get_entry(title)
     content = markdown.markdown(content)
     if not content:
-        content = "Page not found (4000000004)"
+        content = "Page not found (404)"
     return render(request, "encyclopedia/entry.html",{
         "title":title, "content":content
     })
